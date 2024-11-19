@@ -1,0 +1,271 @@
+#root {
+  max-width: 1280px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+button {
+  border-radius: .25rem;
+}
+
+button[disabled] {
+  opacity: 0.5;
+}
+
+button:not([disabled]):hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 1px rgba(255, 210, 87, 0.75);
+}
+
+p {
+  color: #FFD157;
+}
+
+.Page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.Navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #C22E2C;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  height: 5rem;
+}
+
+.Spacer {
+  flex-grow: 1;  
+}
+
+.SearchBar {
+  margin-top: 1.5rem;
+  border-radius: .5rem;
+  width: 60%;
+  height: 1.5rem;
+}
+
+.Link {
+  text-decoration: none;
+  color: #FFD157;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 0rem 1rem;
+}
+
+.PageContent {
+  width: 100%;
+  margin-top: 5rem;
+  height: calc(100vh - 5rem);
+  overflow-y: hidden;
+}
+
+.FilterButtons {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem 1rem;
+  background-color: #312C30;
+  position: fixed;
+  top: 5rem;
+  width: 100%;
+  z-index: 900;
+}
+
+.Newest {
+  margin-right: .5rem;
+  background-color: #C22E2C;
+}
+
+.Popular {
+  background-color: #C22E2C;
+}
+
+.PostsContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem; 
+  height: calc(100vh - 8rem);
+  overflow-y: auto;
+  padding-bottom: 2rem;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.Post {
+  background-color: #403c3f;
+  text-decoration: #403c3f underline;
+  margin: .5rem 1rem;
+  border-radius: .5rem;
+  min-height: 5rem;
+  color: #FFD157;
+  padding: .5rem;
+}
+
+.Post:hover {
+  box-shadow: 0px 0px 10px 1px rgba(255, 210, 87, 0.75);
+}
+
+.PostInfo {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0;
+}
+
+.PostTimeStamp {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.PostUpvotes {
+  text-align: right;
+  margin-bottom: 0;
+}
+
+.PostTitle {
+  text-align: left;
+  margin: 0;
+}
+
+.Blurb {
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.EditBar {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+
+.EditInput {
+  height: 1.5rem;
+  margin-right: .5rem;
+  border-radius: .25rem;
+}
+
+.EditError {
+  margin-top: .25rem;
+  color: #C22E2C;
+}
+
+.EditButton {
+  background-color: #C22E2C;
+  padding: .25rem;
+  margin: 0;
+  border-radius: .25rem;
+  text-decoration: underline #C22E2C;
+  color: #FFD157;
+}
+
+.EditButton:hover {
+  background-color: #A74B2D;
+  text-decoration: underline #A74B2D;
+}
+
+.EditInputs {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.EmptyPNG {
+  max-width: 1rem;
+}
+
+.TinyUV {
+  height: 1rem;
+}
+
+.NotTinyUV {
+  height: 2rem;
+  margin-top: .5rem;
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.NotTinyUV:hover {
+  height: 2.5rem;
+  animation: wiggle 0.5s ease infinite;
+}
+
+.Interactions {
+  display: flex;
+  flex-direction: row;
+  padding: 0rem 1rem;
+  margin-bottom: .5rem;
+}
+
+.CommentLabel {
+  margin-top: .5rem;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  color: #FFD157;
+}
+
+.CommentBox {
+  background-color: #403c3f;
+  margin: 0 1rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  border-radius: .5rem;
+  max-height: 20rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.Comments {
+  text-align: left;
+  padding: 0 2rem;
+  margin-bottom: 0;
+}
+
+.Comment {
+  margin: .5rem;
+  color: #FFD157;
+}
+
+.CommentText {
+  margin-right: .5rem;
+}
+
+.TitleEdit {
+  font-size: 2rem;
+  height: 2rem;
+  text-decoration: underline #312C30;
+  border-radius: .5rem;
+}
+
+.ContentEdit {
+  height: 20rem;
+  text-decoration: underline #312C30;
+  border-radius: .5rem;
+}
+
+.EditCommentBox {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.PostImage {
+  max-height: 20rem;
+}
+
+.SearchHeader {
+  color: #FFD157;
+}
